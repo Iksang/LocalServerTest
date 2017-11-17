@@ -5,10 +5,13 @@ import android.os.Bundle;
 
 public class StudentListActivity extends BaseActivity {
 
+    int lectureId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_list);
+        lectureId = getIntent().getIntExtra("lecture_id", -1);
         bindViews();
         setupEvents();
         setValues();
@@ -21,6 +24,7 @@ public class StudentListActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
 
     }
 
